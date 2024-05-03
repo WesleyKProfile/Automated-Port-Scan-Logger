@@ -45,3 +45,49 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, empow
 
 <sub>ref 4: The image shows the organized reults of all three scans</sub>
 
+## Python Script
+```python
+#Imports the Nmap module which is used for network scanning
+import nmap
+
+#Creates the function "run_nmap_scan" and creates the two variables that are determined by user input
+def run_nmap_scan():
+    target = input("IPv4: ")
+    nmap_operators = input("Nmap Operators: ")
+
+#Creates and uses an instance of the "PortScanner" class from the Nmap module    
+    nmap_scanner = nmap.PortScanner()
+    nmap_scanner.scan(target, arguments=nmap_operators)
+
+#The try block is used to open the file "scan_results.txt." If it can open the file it counts the number of lines that have the word "Operators" in them in order to create the numerical label for each entry.    
+    try:
+        with open("scan_results.txt", "r") as file:
+            total_scans = sum(1 for line in file if "Operators" in line)
+    except FileNotFoundError:
+        total_scans = 0
+
+    total_scans += 1
+
+#This code appends the text file with the new scan and labels the scan with the operators used and the number the scan is.
+    with open("scan_results.txt", "a") as file:
+        file.write(f"{total_scans} - Operators: {nmap_operators}\n\n")
+
+        for host in nmap_scanner.all_hosts():
+            file.write("Host: %s (%s)\n" % (host, nmap_scanner[host].hostname()))
+            file.write("State: %s\n" % nmap_scanner[host].state())
+            for protocol in nmap_scanner[host].all_protocols():
+                file.write("Protcol: %s\n" % protocol)
+                port_info = nmap_scanner[host][protocol]
+                for port, state in port_info.items():
+                    file.write("Port: %s\tState: %s\n" % (port, state))
+            file.write("\n")
+
+
+#Here is the flow control that continues of the user enters "Y" or "y" and ends the code of anything else is entered. 
+if __name__ == "__main__":
+    while True:
+        run_nmap_scan()
+
+        repeat = input("Scan more? (Y/N)\n")
+        if repeat.upper() != "Y":
+            break
