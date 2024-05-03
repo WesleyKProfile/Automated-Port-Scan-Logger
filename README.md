@@ -17,11 +17,10 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, empow
 - Nmap Library to integrate Nmap and all of its functionality into my code
 - Virtual Studio Code as the IDE for effiecient coding
 
-## Scanner in Action
-drag & drop screenshots here or use imgur and reference them using imgsrc
+## Scanner In Action
+1. After launching the code the user will be prompted for an IPv4 address and their desired Nmap operators.
+![image](https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/3a20b9c5-615b-4e01-bfe3-e6f3951fdd02)
+ref 1: The code is running and the user has entered the IP address for Scanme.nmap.org and the user has entered the operator for a stealth scan
 
-Every screenshot should have some text explaining what the screenshot is about.
+2. 
 
-Example below.
-
-*Ref 1: Network Diagram*
