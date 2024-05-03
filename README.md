@@ -19,7 +19,8 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, empow
 
 ## Scanner In Action
 1. After launching the code the user will be prompted for an IPv4 address and their desired Nmap operators.
-![image](https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/3a20b9c5-615b-4e01-bfe3-e6f3951fdd02)
+![image](https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/04293f92-87a8-491c-801f-f901506d7d1b)
+
 ref 1: The code is running and the user has entered the IP address for Scanme.nmap.org and the user has entered the operator for a stealth scan
 
 2. 
