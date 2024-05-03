@@ -1,7 +1,7 @@
 # Automated Port Scan Logger
 
 ## Objective
-The Automated Port Scan Logger is designed to execute multiple Nmap scans, empowering users to specify both the IPv4 address to be scanned and the Nmap operators to employ. This automated scanner serves a multitude of purposes, including basic penetration testing, network troubleshooting, intrusion detection, and beyond. Crafted in Python, this script offers a versatile solution for enhancing cybersecurity protocols and network management strategies.
+The Automated Port Scan Logger is designed to execute multiple Nmap scans, enabling users to specify both the IPv4 address to be scanned and the Nmap operators to employ. This automated scanner serves a multitude of purposes, including basic penetration testing, network troubleshooting, intrusion detection, and beyond. Crafted in Python, this script offers a versatile solution for enhancing cybersecurity protocols and network management strategies.
 
 ### Skills Learned
 
@@ -35,7 +35,7 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, empow
 
 <img src="https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/bda21b68-e7c4-4e3d-b01a-ed7f3f423958" alt="image">
 
-<sub>Ref 3: Ref 3: The image shows the user entering three different operators. The "-A" operator will enable OS detection, Version detection, Script scanning, and Traceroute. The "-T4" runs Nmap in the second fastest mode. The "-p-" operator scans all ports.</sub>
+<sub>Ref 3: The image shows the user entering three different operators. The "-A" operator will enable OS detection, Version detection, Script scanning, and Traceroute. The "-T4" runs Nmap in the second fastest mode. The "-p-" operator scans all ports.</sub>
 
 5. If an invalid IP address or Nmap operator is entered, no scan will be performed, and the script will prompt the user to decide whether they wish to scan again.
 
@@ -43,7 +43,7 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, empow
 
 <img src="https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/1385e69e-a221-4d60-bff8-4100ac3bd773" alt="image">
 
-<sub>Ref 4: The image shows the organized results of all three scans.</sub>
+<sub>Ref 4: The image shows the organized results of all three attempted scans.</sub>
 
 ## Python Script
 ```python
@@ -55,11 +55,12 @@ def run_nmap_scan():
     target = input("IPv4: ")
     nmap_operators = input("Nmap Operators: ")
 
-#Instantiates and utilizes an object of the 'PortScanner' class from the Nmap module.    
+#Utilizes an object of the 'PortScanner' class from the Nmap module.    
     nmap_scanner = nmap.PortScanner()
     nmap_scanner.scan(target, arguments=nmap_operators)
 
-#The try block attempts to open the file 'scan_results.txt' to count the occurrences of the word 'Operators' in each line, which is used to create numerical labels for entries.  
+#The try block attempts to open the file 'scan_results.txt' to count the occurrences of the word 'Operators' in each line, which is
+#used to create numerical labels for entries.  
     try:
         with open("scan_results.txt", "r") as file:
             total_scans = sum(1 for line in file if "Operators" in line)
