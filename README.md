@@ -22,7 +22,7 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, empow
 
 <img src="https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/04293f92-87a8-491c-801f-f901506d7d1b" alt="image">
 
-ref 1: The code is running and the user has entered the IP address for Scanme.nmap.org and the user has entered the operator for a SYN scan(-sS).
+<small>ref 1: The code is running and the user has entered the IP address for Scanme.nmap.org and the user has entered the operator for a SYN scan(-sS).</small>
 
 
 2. Once the Nmap scan has completed the user will be prompted to run more scans. If the user enters case insentive "y" they will be prompted to enter a new IPv4 address and new operators
