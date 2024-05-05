@@ -22,20 +22,20 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, enabl
 
 <img src="https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/04293f92-87a8-491c-801f-f901506d7d1b" alt="image">
 
-<sub>Ref 1: The code is running, and the user has entered the IP address for Scanme.nmap.org, and the user has entered the operator for a SYN scan (-sS).</sub>
+<sub>*Ref 1: The code is running, and the user has entered the IP address for Scanme.nmap.org, and the user has entered the operator for a SYN scan (-sS).*</sub>
 
 
 2. After the Nmap scan has completed, the user will be prompted to run more scans. If the user enters 'y' in a case-insensitive manner, they will be prompted to enter a new IPv4 address and new operators.
 
 <img src="https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/a36dabac-93ee-4564-9fdf-79c5809dda52" alt="image">
 
-<sub>Ref 2: The user is now prompted to either continue scanning or end the script by entering 'Y' or 'N'.</sub>
+<sub>*Ref 2: The user is now prompted to either continue scanning or end the script by entering 'Y' or 'N'.*</sub>
 
 3. The script is capable of utilizing more than one Nmap operator at a time. For instance, the user could run a SYN scan (-sS) and a UDP scan (-sU) simultaneously.
 
 <img src="https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/bda21b68-e7c4-4e3d-b01a-ed7f3f423958" alt="image">
 
-<sub>Ref 3: The image shows the user entering three different operators. The "-A" operator will enable OS detection, Version detection, Script scanning, and Traceroute. The "-T4" runs Nmap in the second fastest mode. The "-p-" operator scans all ports.</sub>
+<sub>*Ref 3: The image shows the user entering three different operators. The "-A" operator will enable OS detection, Version detection, Script scanning, and Traceroute. The "-T4" runs Nmap in the second fastest mode. The "-p-" operator scans all ports.*</sub>
 
 5. If an invalid IP address or Nmap operator is entered, no scan will be performed, and the script will prompt the user to decide whether they wish to scan again.
 
@@ -43,7 +43,7 @@ The Automated Port Scan Logger is designed to execute multiple Nmap scans, enabl
 
 <img src="https://github.com/WesleyKProfile/Automated-Port-Scan-Logger/assets/168662972/1385e69e-a221-4d60-bff8-4100ac3bd773" alt="image">
 
-<sub>Ref 4: The image shows the organized results of all three attempted scans.</sub>
+<sub>*Ref 4: The image shows the organized results of all three attempted scans.*</sub>
 
 ## Python Script
 ```python
